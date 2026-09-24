@@ -50,21 +50,14 @@ h2 i { color: var(--coral); font-style: normal; }
 .work-grid { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); margin-top: 110px; }
 .work-card { display: block; overflow: hidden; padding: 17px; transition: transform .35s cubic-bezier(.22,1,.36,1); }
 .work-card:hover { transform: translateY(-10px) rotate(-1deg); }
-.card-sky { background: var(--sky); }.card-cream { background: #f4eee1; }.card-pink { background: var(--pink); }
+.card-acid { background: var(--acid); }
 .card-top { display: flex; font: 9px var(--mono); justify-content: space-between; text-transform: uppercase; }
 .card-top span:last-child { color: #66706d; }
 .card-art { height: 340px; margin: 30px 0 22px; position: relative; }
-.art-window { background: #e8eeeb; overflow: hidden; }
-.window-sun { background: #f9a967; border-radius: 50%; height: 105px; left: 21%; position: absolute; top: 18%; width: 105px; }
-.window-cloud { border: 1px solid #7595a5; border-radius: 50%; height: 200px; position: absolute; right: -12%; top: 35%; width: 200px; }
-.window-label { bottom: 13%; font-size: 14px; left: 12%; line-height: 1.6; position: absolute; }
 .art-lab { background: #dad3c5; overflow: hidden; }
-.lab-circle { align-items: center; border: 1px solid var(--ink); border-radius: 50%; display: flex; font: 90px var(--mono); height: 220px; justify-content: center; left: 22%; position: absolute; top: 18%; transform: rotate(11deg); width: 220px; }
+.lab-circle { align-items: center; border: 1px solid var(--ink); border-radius: 50%; display: flex; font: 62px var(--mono); height: 220px; justify-content: center; left: 22%; position: absolute; top: 18%; transform: rotate(11deg); width: 220px; }
 .lab-line { border-top: 1px solid var(--ink); left: -10%; position: absolute; top: 65%; transform: rotate(-31deg); width: 125%; }
 .lab-star { bottom: 13%; font-size: 30px; position: absolute; right: 18%; }
-.art-type { background: var(--coral); color: var(--paper); padding: 22px; }
-.art-type strong { font: 500 30px/1 var(--mono); letter-spacing: -.1em; }
-.art-type span { bottom: 14%; font-size: 13px; line-height: 1.6; position: absolute; right: 12%; }
 .card-title { align-items: flex-end; border-top: 1px solid rgba(29,37,36,.55); display: grid; grid-template-columns: 1fr auto; padding-top: 15px; }
 .card-title span { font-size: 15px; font-weight: 700; }.card-title small { color: #67706c; font: 9px var(--mono); grid-column: 1; margin-top: 6px; }.card-title b { font: 22px var(--mono); grid-column: 2; grid-row: 1 / span 2; }
 .about { display: grid; grid-template-columns: 1fr 1fr; min-height: 720px; overflow: hidden; }
@@ -76,7 +69,16 @@ h2 i { color: var(--coral); font-style: normal; }
 .section-dark { background: var(--ink); color: var(--paper); }
 .contact { min-height: 580px; padding-bottom: 40px; padding-top: 130px; }.contact .eyebrow { color: #a0aaa5; }.contact .eyebrow span { color: var(--acid); }.contact-note { color: #a0aaa5; font-size: 14px; line-height: 1.8; position: absolute; right: 10vw; top: 130px; }
 .contact-link { align-items: center; border-bottom: 1px solid #707976; border-top: 1px solid #707976; display: flex; font-size: clamp(25px, 4.8vw, 70px); justify-content: space-between; letter-spacing: -.07em; margin-top: 130px; padding: 20px 0 26px; transition: color .2s; }.contact-link:hover { color: var(--acid); }.contact-link b { font: 38px var(--mono); }
-.contact-footer { bottom: 40px; color: #7f8884; display: flex; font: 9px var(--mono); justify-content: space-between; left: 10vw; position: absolute; right: 10vw; text-transform: uppercase; }
+.contact-footer { bottom: 40px; color: #7f8884; display: flex; font: 9px var(--mono); gap: 20px; justify-content: space-between; left: 10vw; position: absolute; right: 10vw; text-transform: uppercase; }
+.contact-footer a { transition: color .2s; }.contact-footer a:hover { color: var(--acid); }
+.legal-page { background: var(--paper); min-height: 100vh; }
+.legal-main { margin: 0 auto; max-width: 850px; padding: 150px 7vw 100px; }
+.legal-main h1 { font-size: clamp(42px, 7vw, 80px); margin-bottom: 18px; }
+.legal-updated { color: #68716e; font: 11px var(--mono); margin-bottom: 70px; }
+.legal-main h2 { font-size: 24px; margin: 48px 0 16px; }
+.legal-main p, .legal-main li { font-size: 14px; line-height: 2; }
+.legal-main ul { padding-left: 1.5em; }
+.legal-back { color: #68716e; font: 11px var(--mono); }
 .mobile-only { display: none; }
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s ease; }.reveal.is-visible { opacity: 1; transform: none; }
 @media (max-width: 700px) {
@@ -84,5 +86,6 @@ h2 i { color: var(--coral); font-style: normal; }
   .section-frame { padding-left: 7vw; padding-right: 7vw; }.hero { height: 750px; min-height: 0; padding-top: 190px; }.hero-orbit { height: 105vw; right: -28vw; top: 260px; width: 105vw; }.hero-description { font-size: 14px; }.mobile-only { display: block; }.scroll-note { left: 7vw; }.hero-index { right: 7vw; }
   .section-light, .about { padding-bottom: 90px; padding-top: 100px; }.work-grid { display: flex; flex-direction: column; gap: 25px; margin-top: 65px; }.card-art { height: 300px; }.work-card { padding: 14px; }
   .about { display: block; min-height: 800px; }.about-stamp { left: -4vw; top: 19%; }.about-body { margin-top: 390px; }.about-intro { font-size: 21px; }.about-details { display: block; }.about-details p { margin-bottom: 20px; }.signature { margin-top: 50px; }
-  .contact { min-height: 540px; padding-bottom: 35px; padding-top: 100px; }.contact-note { position: static; }.contact-link { margin-top: 100px; word-break: break-all; }.contact-link b { font-size: 28px; margin-left: 12px; }.contact-footer { bottom: 35px; left: 7vw; right: 7vw; }
+  .contact { min-height: 540px; padding-bottom: 35px; padding-top: 100px; }.contact-note { position: static; }.contact-link { margin-top: 100px; word-break: break-all; }.contact-link b { font-size: 28px; margin-left: 12px; }.contact-footer { align-items: flex-start; bottom: 35px; flex-direction: column; gap: 8px; left: 7vw; right: 7vw; }
+  .legal-main { padding: 120px 7vw 70px; }.legal-main h2 { font-size: 21px; }
 }
